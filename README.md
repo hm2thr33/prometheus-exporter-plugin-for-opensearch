@@ -2,19 +2,26 @@
 
 The [Prometheus® exporter](https://prometheus.io/docs/instrumenting/writing_exporters/) plugin for OpenSearch® exposes many OpenSearch metrics in [Prometheus format](https://prometheus.io/docs/instrumenting/exposition_formats/).
 
-- [Preface](#preface)
-- [Introduction](#introduction)
-- [Compatibility Matrix](#compatibility-matrix)
-- [Install or Remove Plugin](#install-or-remove-plugin)
-- [Plugin Configuration](#plugin-configuration)
-  - [Static settings](#static-settings) 
-  - [Dynamic settings](#dynamic-settings) 
-- [Usage](#usage)
-- [Build from Source](#build-from-source)
-- [Testing](#testing)
-  - [BWC Testing](#bwc-testing)
-- [License](#license)
-- [Trademarks & Attributions](#trademarks--attributions)
+- [Prometheus Exporter Plugin for OpenSearch](#prometheus-exporter-plugin-for-opensearch)
+  - [Preface](#preface)
+  - [Introduction](#introduction)
+  - [Compatibility Matrix](#compatibility-matrix)
+  - [Install or Remove Plugin](#install-or-remove-plugin)
+  - [Plugin Configuration](#plugin-configuration)
+    - [Static settings](#static-settings)
+      - [Metric name prefix](#metric-name-prefix)
+    - [Dynamic settings](#dynamic-settings)
+      - [Index level metrics](#index-level-metrics)
+      - [Cluster settings](#cluster-settings)
+      - [Nodes filter](#nodes-filter)
+      - [Indices filter](#indices-filter)
+  - [Usage](#usage)
+    - [Configure the Prometheus target](#configure-the-prometheus-target)
+  - [Build from Source](#build-from-source)
+  - [Testing](#testing)
+    - [BWC Testing](#bwc-testing)
+  - [License](#license)
+  - [Trademarks \& Attributions](#trademarks--attributions)
 
 ---
 
@@ -50,6 +57,7 @@ NOTE: OpenSearch plugins much match _exactly_ in major.minor.path version to the
 
 | OpenSearch |      Plugin |  Release date |
 |-----------:|------------:|--------------:|
+|     2.18.0 |    2.18.0.0 |  Jan 06, 2025 |
 |     2.17.1 |    2.17.1.0 |  Oct 02, 2024 |
 |     2.17.0 |    2.17.0.0 |  Sep 26, 2024 |
 |     2.16.0 |    2.16.0.0 |  Aug 08, 2024 |
