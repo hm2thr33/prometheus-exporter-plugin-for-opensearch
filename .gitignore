@@ -42,6 +42,9 @@ build/
 .vagrant/
 /logs/
 
+# jevn stuff
+.java-version
+
 # osx stuff
 .DS_Store
 
